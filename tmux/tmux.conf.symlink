@@ -1,1 +1,7 @@
 set -g history-limit 20000
+
+##############################
+### Color & Style Settings ###
+##############################
+
+source ~/dotfiles/tmux/theme.sh
