@@ -1,5 +1,7 @@
 # gitconfig
 [user]
+    name = Alexander Kochergin
+    email = ejiqpep@gmail.com
 [github]
 [init]
 [alias]
