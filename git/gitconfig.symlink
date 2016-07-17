@@ -1,10 +1,10 @@
 # gitconfig
-[user]
-    name = Alexander Kochergin
-    email = ejiqpep@gmail.com
-[github]
 [init]
 [alias]
+    co = checkout
+    p = push
+    br = branch
+    c = commit -am
     s = status --short
 [color]
     diff = auto
