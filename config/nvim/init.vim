@@ -162,13 +162,4 @@ set ignorecase
 " Smart search
 set smartcase
 
-
-
-so ~/.config/nvim/settings.vim
-p leader for more key combos
-let mapleader = ','
-let g:mapleader = ','
-
-
-
 so ~/.config/nvim/settings.vim
