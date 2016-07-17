@@ -13,6 +13,8 @@ brew install git
 brew install macvim --override-system-vim
 brew install tmux
 brew install zsh
+# Commands syntax highlighting like in fish
+brew install zsh-syntax-highlighting
 
 # install neovim
 brew install neovim/neovim/neovim
