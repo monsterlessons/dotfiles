@@ -1,4 +1,7 @@
 nmap <silent> <leader>r :CtrlPBuffer<cr>
-let g:ctrlp_map='<leader>t'
-let g:ctrlp_dotfiles=1
-let g:ctrlp_working_path_mode = 'ra'
+" Open file menu
+nnoremap <Leader>t :CtrlP<CR>
+" Open buffer menu
+nnoremap <Leader>b :CtrlPBuffer<CR>
+" Open most recently used files
+nnoremap <Leader>f :CtrlPMRUFiles<CR>

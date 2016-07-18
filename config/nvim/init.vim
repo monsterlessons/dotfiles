@@ -69,7 +69,11 @@ Plug 'ap/vim-css-color', { 'for': ['css','stylus','scss'] }
 " CSS3 syntax support
 Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
 
-
+" Autocomplete for vim
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 
 
 
@@ -90,7 +94,7 @@ set backspace=indent,eol,start
 set history=1000
 
 " Show incomplete cmds down the bottom
-set showcmd
+set howcmd
 
 " Show current mode down the bottom
 set showmode
@@ -177,10 +181,10 @@ set ttyfast
 
 set laststatus=2
 
-augroup configgroup
-  autocmd!
-  autocmd! BufWritePost * Neomake
-augroup END
+" augroup configgroup
+"   autocmd!
+"   autocmd! BufWritePost * Neomake
+" augroup END
 
 " --------- Folding ------------------
 
