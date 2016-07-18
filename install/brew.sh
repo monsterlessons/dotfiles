@@ -16,5 +16,7 @@ brew install zsh
 # Commands syntax highlighting like in fish
 brew install zsh-syntax-highlighting
 
+brew install diff-so-fancy
+
 # install neovim
 brew install neovim/neovim/neovim
