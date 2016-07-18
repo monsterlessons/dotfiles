@@ -3,6 +3,11 @@ call plug#begin('~/.config/nvim/plugged')
 " Sidebar
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons' " file drawer
 
+" Dust highligh
+Plug 'mirlord/vim-dust'
+
+" Amazing git wrapper for vim
+Plug 'tpope/vim-fugitive'
 
 call plug#end()
 
