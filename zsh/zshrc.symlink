@@ -10,6 +10,11 @@ for config ($ZSH/**/*.zsh) source $config
 # use nvim as an editor by default
 export EDITOR='nvim'
 
+# nvm
+
+export NVM_DIR=~/.nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+
 # Installing theme
 export THEME="base16-atelier-cave"
 

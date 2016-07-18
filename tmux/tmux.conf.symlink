@@ -1,7 +1,12 @@
 set -g history-limit 20000
 
+# unbind default prefix and set it to Ctrl+a
+unbind C-b
+set -g prefix C-a
+bind C-a send-prefix
+
 ##############################
 ### Color & Style Settings ###
 ##############################
 
-source ~/dotfiles/tmux/theme.sh
+source ~/.dotfiles/tmux/theme.sh
