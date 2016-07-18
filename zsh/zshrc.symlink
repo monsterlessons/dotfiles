@@ -7,6 +7,10 @@ export REPORTTIME=10
 # source all .zsh files inside of the zsh/ directory
 for config ($ZSH/**/*.zsh) source $config
 
+# initialize autocomplete
+autoload -U compinit add-zsh-hook
+compinit
+
 # use nvim as an editor by default
 export EDITOR='nvim'
 

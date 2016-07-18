@@ -1,5 +1,8 @@
 call plug#begin('~/.config/nvim/plugged')
 
+" colorschemes
+Plug 'chriskempson/base16-vim'
+
 " Sidebar
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons' " file drawer
 
@@ -8,6 +11,9 @@ Plug 'mirlord/vim-dust'
 
 " fuzzy file finder, mapped to <leader>t
 Plug 'ctrlpvim/ctrlp.vim'
+
+" neovim replacement for syntastic using neovim's job control functonality
+Plug 'benekastah/neomake'
 
 " fancy statusline
 Plug 'vim-airline/vim-airline'
@@ -115,6 +121,7 @@ syntax on
 
 let base16colorspace=256  " Access colors present in 256 colorspace"
 set t_Co=256 " Explicitly tell vim that the terminal supports 256 colors"
+execute "colorscheme ".$THEME
 highlight Comment cterm=italic
 highlight htmlArg cterm=italic
 
@@ -168,12 +175,12 @@ set clipboard=unnamed
 " Faster redrawing
 set ttyfast
 
-" Backup
-set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-
-" Show the stastah/neomake' " neovim replacement for syntastic using neovim's job control functonalitytus line all the time
 set laststatus=2
+
+augroup configgroup
+  autocmd!
+  autocmd! BufWritePost * Neomake
+augroup END
 
 " --------- Folding ------------------
 
