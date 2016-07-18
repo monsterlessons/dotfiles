@@ -3,11 +3,69 @@ call plug#begin('~/.config/nvim/plugged')
 " Sidebar
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] } | Plug 'Xuyuanp/nerdtree-git-plugin' | Plug 'ryanoasis/vim-devicons' " file drawer
 
-" Dust highligh
+" Dust highlight
 Plug 'mirlord/vim-dust'
+
+" fuzzy file finder, mapped to <leader>t
+Plug 'ctrlpvim/ctrlp.vim'
+
+" fancy statusline
+Plug 'vim-airline/vim-airline'
+
+" themes for vim-airline
+Plug 'vim-airline/vim-airline-themes'
+
+" search inside files using ack. Same as command line ack utility, but use :Ack
+Plug 'mileszs/ack.vim'
 
 " Amazing git wrapper for vim
 Plug 'tpope/vim-fugitive'
+
+" mappings to easily delete, change and add such surroundings in pairs, such as quotes, parens, etc.
+Plug 'tpope/vim-surround'
+
+" Comment code
+Plug 'tpope/vim-commentary'
+
+" automatic closing of quotes, parenthesis, brackets, etc.
+Plug 'Raimondi/delimitMate'
+
+" .editorconfig support
+Plug 'editorconfig/editorconfig-vim'
+
+" match tags in html, similar to paren support
+Plug 'gregsexton/MatchTag', { 'for': 'html' }
+
+" JavaScript indent support
+Plug 'gavocanov/vim-js-indent', { 'for': 'javascript' }
+
+" node support
+Plug 'moll/vim-node', { 'for': 'javascript' }
+
+" JavaScript syntax plugin
+Plug 'othree/yajs.vim', { 'for': 'javascript' }
+
+" JSX support
+Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+
+" JSON support
+Plug 'elzr/vim-json', { 'for': 'json' }
+
+" ES6 and beyond syntax
+Plug 'othree/es.next.syntax.vim', { 'for': 'javascript' }
+
+" Sass scss syntax support
+Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' } 
+
+" set the background of hex color values to the color
+Plug 'ap/vim-css-color', { 'for': ['css','stylus','scss'] }
+
+" CSS3 syntax support
+Plug 'hail2u/vim-css3-syntax', { 'for': 'css' }
+
+
+
+
 
 call plug#end()
 
@@ -166,5 +224,10 @@ set ignorecase
 
 " Smart search
 set smartcase
+
+" --------- Turn off swap files ------------------
+set noswapfile
+set nobackup
+set nowb
 
 so ~/.config/nvim/settings.vim
