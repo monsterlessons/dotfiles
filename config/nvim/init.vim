@@ -78,7 +78,8 @@ function! DoRemote(arg)
 endfunction
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 
-
+" Show trailing spaces
+Plug 'ntpeters/vim-better-whitespace'
 
 call plug#end()
 
@@ -165,11 +166,6 @@ set list listchars=tab:\ \ ,trail:·
 
 " Don't wrap lines
 set nowrap
-
-" Correct text linebreaks
-" http://vimcasts.org/episodes/soft-wrapping-text/
-set wrap linebreak nolist
-set showbreak=…
 
 " Wrap lines at convenient points
 set linebreak
