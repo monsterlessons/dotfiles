@@ -15,6 +15,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 " neovim replacement for syntastic using neovim's job control functonality
 Plug 'benekastah/neomake'
 
+" use local eslint for syntastic
+Plug 'jaawerth/neomake-local-eslint-first'
+
 " fancy statusline
 Plug 'vim-airline/vim-airline'
 
@@ -94,7 +97,7 @@ set backspace=indent,eol,start
 set history=1000
 
 " Show incomplete cmds down the bottom
-set howcmd
+set showcmd
 
 " Show current mode down the bottom
 set showmode

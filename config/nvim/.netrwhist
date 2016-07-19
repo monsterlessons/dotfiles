@@ -1,4 +1,4 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/ejiqpep/Projects/monsterlessons'
-let g:netrw_dirhist_2='/Users/ejiqpep/.dotfiles'
+let g:netrw_dirhist_1='/Users/alexander.kochergin/.dotfiles/config/nvim'
+let g:netrw_dirhist_2='/Users/alexander.kochergin/.dotfiles/config/nvim/settings'
