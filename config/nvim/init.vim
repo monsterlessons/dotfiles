@@ -104,6 +104,7 @@ set showmode
 
 " Disable cursor blink
 set gcr=a:blinkon0
+let $NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
 
 " No sounds
 set visualbell
