@@ -4,6 +4,8 @@ export ZSH=$DOTFILES/zsh
 # display how long all tasks over 10 seconds take
 export REPORTTIME=10
 
+[[ -e ~/.terminfo ]] && export TERMINFO_DIRS=~/.terminfo:/usr/share/terminfo
+
 # source all .zsh files inside of the zsh/ directory
 for config ($ZSH/**/*.zsh) source $config
 
@@ -14,13 +16,27 @@ compinit
 # use nvim as an editor by default
 export EDITOR='nvim'
 
-# nvm
+# add /usr/local/sbin
+export PATH=/usr/local/bin:$PATH
+if [[ -d /usr/local/sbin ]]; then
+    export PATH=/usr/local/sbin:$PATH
+fi
 
+# set term for tmux
+[ -z "$TMUX" ] && export TERM=xterm-256color
+
+# nvm
 export NVM_DIR=~/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" # This loads nvm
+load-nvmrc() {
+    if [[ -f .nvmrc && -r .nvmrc ]]; then
+        nvm use
+    fi
+}
+add-zsh-hook chpwd load-nvmrc
 
 # Installing theme
-export THEME="base16-atelier-cave"
+export THEME="base16-solarized-dark"
 
 BASE16_SHELL="$DOTFILES/.config/base16-shell/scripts/$THEME.sh"
 source $BASE16_SHELL

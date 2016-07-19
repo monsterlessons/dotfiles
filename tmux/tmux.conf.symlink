@@ -1,5 +1,8 @@
 set -g history-limit 20000
 
+# tmux display things in 256 colors
+set -g default-terminal "xterm-256color"
+
 # unbind default prefix and set it to Ctrl+a
 unbind C-b
 set -g prefix C-a
@@ -21,6 +24,25 @@ set-option -g set-titles-string "#T - #W"
 
 # reload config file
 bind r source-file ~/.tmux.conf \; display "Config Reloaded!"
+
+# split window and fix path for tmux 1.9
+bind | split-window -h -c "#{pane_current_path}"
+bind - split-window -v -c "#{pane_current_path}"
+
+# pane movement shortcuts
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
+# Resize pane shortcuts
+bind -r H resize-pane -L 5
+bind -r J resize-pane -D 5
+bind -r K resize-pane -U 5
+bind -r L resize-pane -R 5
+
+# enable mouse support for switching panes/windows
+setw -g mouse on
 
 ##############################
 ### Color & Style Settings ###
