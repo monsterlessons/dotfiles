@@ -1,3 +1,5 @@
+set -g default-command "login-shell"
+
 set -g history-limit 20000
 
 # tmux display things in 256 colors

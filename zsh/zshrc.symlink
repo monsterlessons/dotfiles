@@ -22,6 +22,9 @@ if [[ -d /usr/local/sbin ]]; then
     export PATH=/usr/local/sbin:$PATH
 fi
 
+# adding path directory for custom scripts
+export PATH=$DOTFILES/bin:$PATH
+
 # set term for tmux
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
