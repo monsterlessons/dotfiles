@@ -64,7 +64,7 @@ Plug 'elzr/vim-json', { 'for': 'json' }
 Plug 'othree/es.next.syntax.vim', { 'for': 'javascript' }
 
 " Sass scss syntax support
-Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' } 
+Plug 'cakebaker/scss-syntax.vim', { 'for': 'scss' }
 
 " set the background of hex color values to the color
 Plug 'ap/vim-css-color', { 'for': ['css','stylus','scss'] }
@@ -86,7 +86,7 @@ call plug#end()
 " --------- General config ------------
 
 " not compatible with vi
-set nocompatible 
+set nocompatible
 
 " show line numbers
 set number
@@ -178,6 +178,8 @@ set clipboard=unnamed
 
 " Faster redrawing
 set ttyfast
+" don't redraw while executing macros
+set nolazyredraw
 
 set laststatus=2
 
