@@ -1,4 +1,6 @@
-# gitconfig
+[user]
+	name = Alexander Kochergin
+	email = alexander.kochergin@aboutyou.de
 [init]
 [alias]
     co = checkout
@@ -10,9 +12,37 @@
     # Kaleidoscope commands
     dkal = difftool -y -t Kaleidoscope
     mkal = mergetool -y -t Kaleidoscope
+[push]
+    # push will only do the current branch, not all branches
+    default = current
+[branch]
+    # set up 'git pull' to rebase instead of merge
+    autosetuprebase = always
+[diff]
+    renames = copies
+    mnemonicprefix = true
+    compactionHeuristic = true
+[difftool]
+    prompt = false
+[apply]
+    # do not warn about missing whitespace at EOF
+    whitespace = nowarn
+[core]
+    excludesfile = ~/.gitignore_global
+    pager = less -FXRS -x2
+    editor = vim
+    whitespace = cr-at-eol
+[pager]
+    diff = "diff-so-fancy | less --tabs=4 -RFX"
+    show = "diff-so-fancy | less --tabs=4 -RFX"
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
 [color]
     diff = auto
-    status = auto
+    etatus = auto
     branch = auto
     interactive = auto
     ui = auto
@@ -31,17 +61,3 @@
     untracked = red
 [color "sh"]
     branch = yellow
-[push]
-    # push will only do the current branch, not all branches
-    default = current
-[pager]
-    diff = "diff-so-fancy | less --tabs=4 -RFX"
-    show = "diff-so-fancy | less --tabs=4 -RFX"
-[user]
-	name = Alexander Kochergin
-	email = alexander.kochergin@aboutyou.de
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustexitcode = true
