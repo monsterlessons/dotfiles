@@ -6,6 +6,10 @@
     br = branch
     c = commit -am
     s = status --short
+
+    # Kaleidoscope commands
+    dkal = difftool -y -t Kaleidoscope
+    mkal = mergetool -y -t Kaleidoscope
 [color]
     diff = auto
     status = auto
@@ -36,3 +40,8 @@
 [user]
 	name = Alexander Kochergin
 	email = alexander.kochergin@aboutyou.de
+[difftool "Kaleidoscope"]
+	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+[mergetool "Kaleidoscope"]
+	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+	trustexitcode = true
