@@ -81,6 +81,9 @@ Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 " Show trailing spaces
 Plug 'ntpeters/vim-better-whitespace'
 
+" Local history
+Plug 'hjdivad/vimlocalhistory'
+
 call plug#end()
 
 " --------- General config ------------
