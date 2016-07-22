@@ -82,7 +82,7 @@ Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'ntpeters/vim-better-whitespace'
 
 " Local history
-Plug 'hjdivad/vimlocalhistory'
+Plug 'mbbill/undotree'
 
 call plug#end()
 
