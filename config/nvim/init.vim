@@ -84,6 +84,12 @@ Plug 'ntpeters/vim-better-whitespace'
 " Local history
 Plug 'mbbill/undotree'
 
+" Buffers tabline
+Plug 'ap/vim-buftabline'
+
+" Tmux syntax
+Plug 'keith/tmux.vim'
+
 call plug#end()
 
 " --------- General config ------------
