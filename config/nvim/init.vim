@@ -123,7 +123,12 @@ set noerrorbells
 " Reload files changed outside vim
 set autoread
 
+" Automatically write before running commands
+set autowrite
+
+" Show line when it's longer than 120
 set textwidth=120
+set colorcolumn=+1
 
 " Make diff split vertical by default
 set diffopt+=vertical
