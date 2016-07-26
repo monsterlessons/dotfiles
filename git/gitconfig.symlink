@@ -8,6 +8,7 @@
     br = branch
     c = commit -am
     s = status --short
+    cp = cherry-pick
 
     # Kaleidoscope commands
     dkal = difftool -y -t Kaleidoscope
