@@ -2,4 +2,4 @@ tags*
 config/nvim/plugged
 .netrwhist
 npm-debug.log*
-
+config/nvim/.init.vim-rplugin~
